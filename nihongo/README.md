@@ -26,6 +26,17 @@ nihongo/
 
 日後要新增單字、文法題、閱讀文章，只需要編輯 `data/` 裡對應的 JSON 檔案，不需要動到任何 HTML/JS 程式碼，格式請直接參考檔案中既有的項目照著寫即可。
 
+## 本機預覽注意事項
+
+因為 `vocab.js`、`grammar.js`、`reading.js` 是用 `fetch()` 從 `data/` 資料夾讀取 JSON 資料，**如果直接雙擊 `index.html`（或任何頁面）用瀏覽器打開**（網址列顯示 `file:///...`），瀏覽器會基於安全性封鎖本機檔案間的 `fetch()` 請求，導致頁面一直顯示「資料載入失敗」。
+
+本機測試時，請改用本機伺服器打開，例如擇一：
+
+- **Python**：在 `nihongo` 資料夾內執行 `python -m http.server`，然後瀏覽器打開 `http://localhost:8000/`
+- **VS Code**：安裝 Live Server 套件，在 `index.html` 按右鍵選「Open with Live Server」
+
+部署到 GitHub Pages 後（見下方步驟），因為是用 `http(s)://` 協定開啟，不會有這個問題，可以直接使用。
+
 ## 部署到 GitHub Pages（免費、無需伺服器）
 
 因為你已經有 GitHub 帳號了，以下是完整步驟：
