@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>単語カード | 研鑽</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="brand">
+    <span class="brand-mark">研</span>
+    <span>
+      <span class="brand-text">研鑽</span>
+      <span class="brand-sub">N2 → N1 STUDY</span>
+    </span>
+  </a>
+  <nav class="site-nav">
+    <a href="index.html">ホーム</a>
+    <a href="vocab.html" class="active">単語</a>
+    <a href="grammar.html">文法</a>
+    <a href="reading.html">読解</a>
+  </nav>
+</header>
+
+<main>
+  <p class="page-eyebrow">01 / VOCABULARY</p>
+  <h1 class="page-title">単語カード</h1>
+  <p class="page-desc">看到單字後，先在下方輸入讀音（平假名），答對會自動翻卡顯示發音與意思；答錯可以選擇再試一次或直接查看答案。</p>
+
+  <div class="progress-row">
+    <span id="progressLabel">1 / 30</span>
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <span id="scoreLabel">正解 0</span>
+  </div>
+
+  <div class="flash-stage">
+    <div class="flashcard" id="flashcard">
+      <div class="word" id="wordDisplay">—</div>
+      <div class="kana" id="kanaDisplay" style="display:none;"></div>
+      <div class="meaning" id="meaningDisplay" style="display:none;"></div>
+    </div>
+
+    <form class="answer-form" id="answerForm">
+      <input type="text" id="answerInput" placeholder="請輸入平假名讀音" autocomplete="off">
+      <button type="submit" class="btn">確認</button>
+    </form>
+
+    <div class="feedback-msg" id="feedbackMsg"></div>
+
+    <div class="action-row" id="retryRow" style="display:none;">
+      <button class="btn btn-outline" id="retryBtn">再試一次</button>
+      <button class="btn btn-ghost" id="revealBtn">查看答案</button>
+    </div>
+
+    <div class="action-row" id="nextRow" style="display:none;">
+      <button class="btn" id="nextBtn">下一張 →</button>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">個人学習用サイト・N2〜N1 対応</footer>
+
+<script src="js/vocab.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>読解演習 | 研鑽</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="brand">
+    <span class="brand-mark">研</span>
+    <span>
+      <span class="brand-text">研鑽</span>
+      <span class="brand-sub">N2 → N1 STUDY</span>
+    </span>
+  </a>
+  <nav class="site-nav">
+    <a href="index.html">ホーム</a>
+    <a href="vocab.html">単語</a>
+    <a href="grammar.html">文法</a>
+    <a href="reading.html" class="active">読解</a>
+  </nav>
+</header>
+
+<main>
+  <p class="page-eyebrow">03 / READING</p>
+  <h1 class="page-title">読解演習</h1>
+  <p class="page-desc">閱讀短文後回答兩個問題，題型模擬日檢閱讀理解。答錯時，會從文章中標出該題的關鍵句作為提示。</p>
+
+  <div class="progress-row">
+    <span id="progressLabel">第 1 篇 / 3</span>
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <span id="scoreLabel">正解 0 / 6</span>
+  </div>
+
+  <div class="reading-passage" id="passageBox">
+    <h3 id="passageTitle"></h3>
+    <p id="passageText"></p>
+  </div>
+
+  <div id="questionsWrap"></div>
+
+  <div class="action-row" style="margin-top:10px;">
+    <button class="btn" id="nextBtn" style="display:none;">下一篇 →</button>
+  </div>
+
+  <div class="result-banner" id="resultBanner" style="display:none;">
+    <p class="page-eyebrow" style="margin:0;">READING COMPLETE</p>
+    <div class="score" id="finalScore"></div>
+    <button class="btn btn-outline" id="restartBtn">重新開始</button>
+  </div>
+</main>
+
+<footer class="site-footer">個人学習用サイト・N2〜N1 対応</footer>
+
+<script src="js/reading.js"></script>
+</body>
+</html>

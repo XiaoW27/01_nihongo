@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>文法選択 | 研鑽</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="brand">
+    <span class="brand-mark">研</span>
+    <span>
+      <span class="brand-text">研鑽</span>
+      <span class="brand-sub">N2 → N1 STUDY</span>
+    </span>
+  </a>
+  <nav class="site-nav">
+    <a href="index.html">ホーム</a>
+    <a href="vocab.html">単語</a>
+    <a href="grammar.html" class="active">文法</a>
+    <a href="reading.html">読解</a>
+  </nav>
+</header>
+
+<main>
+  <p class="page-eyebrow">02 / GRAMMAR</p>
+  <h1 class="page-title">文法選択</h1>
+  <p class="page-desc">從四個容易混淆的相近文法中，選出最適合填入句子的一個。無論答對答錯，下方都會列出四個選項各自的用法解說。</p>
+
+  <div class="progress-row">
+    <span id="progressLabel">1 / 12</span>
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <span id="scoreLabel">正解 0</span>
+  </div>
+
+  <div class="grammar-card">
+    <div class="grammar-sentence" id="sentenceDisplay"></div>
+    <div class="option-list" id="optionList"></div>
+    <div class="explain-box" id="explainBox"></div>
+  </div>
+
+  <div class="action-row" style="margin-top:22px;">
+    <button class="btn" id="nextBtn" style="display:none;">下一題 →</button>
+  </div>
+</main>
+
+<footer class="site-footer">個人学習用サイト・N2〜N1 対応</footer>
+
+<script src="js/grammar.js"></script>
+</body>
+</html>
